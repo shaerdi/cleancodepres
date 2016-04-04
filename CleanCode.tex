@@ -1,0 +1,108 @@
+\documentclass[handout]{beamer} 
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{mathptmx} 
+\usepackage{outlines} 
+\usepackage{listings}
+\usepackage{tikz}
+
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\usetheme{Montpellier}
+%\usetheme{ntb}
+
+\title[CleanCode]{Clean Code}
+\author{Simon Härdi}
+\institute{Institute for Computational Engineering}
+\date{xx}
+
+\graphicspath{ {pictures/} }
+
+\include{macros}
+\include{lstdefinition}
+
+
+\begin{document}
+
+{
+\setbeamertemplate{footline}{} % No footer on first slide
+\begin{frame}
+\maketitle
+\end{frame}
+}
+
+\begin{frame}
+    \frametitle{Inhalt}
+    \tableofcontents
+\end{frame}
+
+\section{Einleitung}
+\begin{frame}
+%\frametitle{Einleitung}
+    \begin{center}
+        \includegraphics[width=7cm]{wtfm.jpg}
+    \end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Einleitung}
+Was dieser Vortrag bringen soll
+    \begin{outline}
+        \1 Was ist Clean Code?
+        \1 Wieso sollten wir Clean Code schreiben?
+        \1 Wann sollten wir Clean Code schreiben?
+    \end{outline}
+\end{frame}
+
+\begin{frame}[fragile]
+%ToDo: Code als png von Matlab Editor
+\begin{minipage}[t]{0.49\linewidth}
+    \begin{lstlisting}[basicstyle=\tiny]
+function res = testPoint(p1,p2,p)
+    m = (p2(2)-p1(2))/(p2(1)-p1(1));
+    y = p1(2) + (p(1)-p1(1))*m;
+    if p(2)>y
+        res = 1;
+    else
+        res = 0;
+    end
+end
+\end{lstlisting}
+\end{minipage}
+\begin{minipage}[t]{0.49\linewidth}
+    \begin{lstlisting}[basicstyle=\tiny]
+function isAbove = pointIsAboveLine( ...
+          linePoint1, linePoint2, pointToTest )
+    slope = calcSlopeBetweenPoints(linePoint1,linePoint2);
+    dx = pointToTest(1) - linePoint1(1);
+    dy_onSlope=dx*slope
+    dy_toPoint=pointToTest(2) - linePoint1(2);
+    isAbove = dy_toPoint > dy_onSlope;
+end
+function slope = calcSlopeBetweenPoints(...
+                 point1, point2 )
+    distance = point2 - point1;
+    slope = distance(2) / distance(1);
+end
+\end{lstlisting}
+        
+\end{minipage}
+\end{frame}
+\begin{frame}
+\pause
+\begin{tikzpicture}[overlay,shift={(6,0.5)}]
+    \draw (0,0) node[left] {$P_1$} -- (3,1) node[right] {$P_2$};
+    \node at (1.5,1) {res=1};
+    \node at (1.5,0) {res=0};
+\end{tikzpicture}
+\end{frame}
+\section{Grundsätze}
+
+\section{Erweitert}
+\section{Fazit}
+
+\end{document}
