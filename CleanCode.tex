@@ -43,19 +43,24 @@
 
 \section{Einleitung}
 \begin{frame}
-%\frametitle{Einleitung}
+\frametitle{Einleitung}
+\begin{columns}
+    \begin{column}{0.6\textwidth}
+        \begin{outline}
+            \1 Was ist Clean Code?
+            \1 Wieso sollten wir Clean Code schreiben?
+            \1 Wann sollten wir Clean Code schreiben?
+        \end{outline}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+        \includegraphics[width=\linewidth]{cleanCodeBook.jpg}
+    \end{column}
+\end{columns}
+\end{frame}
+\begin{frame}
     \begin{center}
         \includegraphics[width=7cm]{wtfm.jpg}
     \end{center}
-\end{frame}
-\begin{frame}
-\frametitle{Einleitung}
-Was dieser Vortrag bringen soll
-    \begin{outline}
-        \1 Was ist Clean Code?
-        \1 Wieso sollten wir Clean Code schreiben?
-        \1 Wann sollten wir Clean Code schreiben?
-    \end{outline}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -92,17 +97,93 @@ end
         
 \end{minipage}
 \end{frame}
+
 \begin{frame}
-\pause
-\begin{tikzpicture}[overlay,shift={(6,0.5)}]
-    \draw (0,0) node[left] {$P_1$} -- (3,1) node[right] {$P_2$};
-    \node at (1.5,1) {res=1};
-    \node at (1.5,0) {res=0};
-\end{tikzpicture}
+    \frametitle{Grundsatz:}
+    \begin{center}
+        \huge \bf Code wird öfters gelesen als geschrieben
+    \end{center}
+    \vspace{2em}\pause
+    Also nicht \textit{'Wie schreibe ich schnell Code?'}, \\
+    sondern \textit{'Wie schreibe ich schnell zu lesenden Code?'}
 \end{frame}
-\section{Grundsätze}
+
+\section{Basics}
+\begin{frame}
+    \tableofcontents[currentsection]
+\end{frame}
+\subsection{Namen}
+\begin{frame}
+    \frametitle{Namen}
+    \begin{outline}
+        \1 Namen sollen Beschreiben
+        \1 Lange Namen kein Problem
+        \1 Keine Füllwörter
+    \end{outline}
+\end{frame}
+
+\subsection{Funktionen}
+\begin{frame}
+    \frametitle{Funktionen}
+    \begin{outline}
+        \1 Kurz
+        \1 Kürzer!
+        \1 Nur eine Sache
+        \1 Möglichst wenig Argumente
+    \end{outline}
+\end{frame}
+
+\subsection{Kommentare}
+\begin{frame}
+    \frametitle{Kommentare}
+    \begin{outline}
+        \1 Kommentare sind \emph{nicht} per se gut
+        \1 Auskommentierter Code
+        \1 Nicht mehr aktuelle Kommentare
+    \end{outline}
+\end{frame}
 
 \section{Erweitert}
+\subsection{Tests}
+\begin{frame}
+    \frametitle{Tests}
+    \begin{outline}
+        \1 Jeder schreibt Tests 
+        \1[] $\Rightarrow$  Wieso nur in Konsole?
+        \1 Gehören zum Code dazu
+        \1 Alles Testen
+            \2 Jede Funktion
+            \2 Möglichst jeden Spezialfall
+    \end{outline}
+\end{frame}
+\subsection{Test Driven Development}
+\begin{frame}
+    \frametitle{Test Driven Development}
+    \begin{outline}
+        \1 Tests \emph{vor} der Funktion schreiben
+        \1 Ein Test $\rightarrow$ Eine Funktion $\rightarrow$ repeat
+    \end{outline}
+\end{frame}
+\subsection{Successive Refinement}
+\begin{frame}
+    \frametitle{Successive Refinement}
+    \begin{outline}
+        \1 Code ist \emph{nicht} fertig, sobald er funktioniert
+        \1 Kontinuierlich verbessern
+        \1 Dank Tests keine Angst, etwas kaputt zu machen
+    \end{outline}
+\end{frame}
+
 \section{Fazit}
+\begin{frame}
+    \frametitle{Fazit}
+    \begin{outline}
+        \1 Beschreibende Namen
+        \1 Kurze Funktionen
+        \1 Kommentare überlegt benutzen
+        \1 Versionierungssystem benutzen
+        \1 Tests \emph{zuerst} schreiben
+    \end{outline}
+\end{frame}
 
 \end{document}
