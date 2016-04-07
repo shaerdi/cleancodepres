@@ -1,0 +1,12 @@
+Usage:
+- Place folder in latex search path
+  Command to get this path on Ubuntu (linux): 
+  kpsepath tex | tr : '\n' | grep home
+- Use package ntb as theme in preamble of beamer document
+  \usetheme{ntb}
+- Define \autor{}, \institute{}, \title{} and \date{} in preamble
+- If you dont want to show the footer on the title page:
+  {
+  \setbeamertemplate{footline}{}
+  \maketitle
+  }
