@@ -1,4 +1,4 @@
-function res = testPoints2(x,y)
+function pointClass = testPoints2(x,y)
     lineFunction = fitLine(x,y);
     parabolaFunction = fitParabola(x,y);
     
@@ -10,13 +10,14 @@ function res = testPoints2(x,y)
     onlyAboveParabola = ~pIsAboveLine & pIsAboveParabola;
     belowBoth = ~pIsAboveLine & ~pIsAboveParabola;
     
-    res(aboveBoth) = 1;
-    res(onlyAboveLine) = 2;
-    res(onlyAboveParabola) = 3;
-    res(belowBoth) = 4;
+    pointClass(aboveBoth) = 1;
+    pointClass(onlyAboveLine) = 2;
+    pointClass(onlyAboveParabola) = 3;
+    pointClass(belowBoth) = 4;
     
     figure();hold on;
-    plotPoints(x,y,res,'rbgc')
+    classColors = 'rbgc';
+    plotPoints(x,y,res,classColors)
     
     plotLimit = [min(x),max(x)];
     plotFunction(lineFunction, plotLimit);
