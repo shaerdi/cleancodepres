@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer} 
+\documentclass{beamer} 
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -35,10 +35,10 @@
 \end{frame}
 }
 
-\begin{frame}
-    \frametitle{Inhalt}
-    \tableofcontents
-\end{frame}
+%\begin{frame}
+    %\frametitle{Inhalt}
+    %\tableofcontents
+%\end{frame}
 
 \section{Einleitung}
 \begin{frame}
@@ -90,19 +90,82 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
 
 \section{Basics}
 \begin{frame}
+    \tableofcontents
+    \only<2->{
+    \begin{tikzpicture}[overlay,
+        shift={(current page.south west)},
+        x = \paperwidth,
+        y = \paperheight,
+    ]
+    \draw[red] (0.27,0.58) to[out=0,in=180] ++(0.025,-0.1) node[right] (a) {}
+    to[out=180,in=0] ++(-0.025,-0.1);
+    \draw[->,red] (0.6,0.5) node[right] {Für alle Codes!} 
+    to[out=170,in=10] (a);
+    \end{tikzpicture}}
+    \only<3->{
+    \begin{tikzpicture}[overlay,
+        shift={(current page.south west)},
+        x = \paperwidth,
+        y = \paperheight,
+    ]
+    \draw[red] (0.45,0.33) to[out=0,in=180] ++(0.025,-0.1) node[right] (b) {}
+    to[out=180,in=0] ++(-0.025,-0.1);
+    \draw[->,red] (0.6,0.2) node[right,align=left] {Für grössere /\\
+    Projekt Codes} 
+    to[out=170,in=10] (b);
+    \end{tikzpicture}}
+\end{frame}
+\begin{frame}
     \tableofcontents[currentsection]
-    \begin{tikzpicture}[overlay]
-    \draw[->,red] (8,4) node[right] {Für alle Codes!} to[out=170,in=10] (4,5);
-    \end{tikzpicture}
 \end{frame}
 \subsection{Namen}
 \begin{frame}
     \frametitle{Namen}
-    \begin{outline}
-        \1 Namen sollen Beschreiben
-        \1 Lange Namen kein Problem
-        \1 Keine Füllwörter
-    \end{outline}
+        %TODO: Lustiges Bild
+    %\begin{outline}
+        %\1 Namen sollen Beschreiben
+        %\1 Lange Namen kein Problem
+        %\1 Keine Füllwörter
+    %\end{outline}
+\end{frame}
+\begin{frame}
+    \frametitle{Namen sollen Beschreiben}
+    \begin{columns}[t]
+        \column{0.5\textwidth}
+        \begin{center}
+            \huge \color{green} Gut
+        \end{center}
+        \column{0.5\textwidth}
+        \begin{center}
+            \huge \color{red} Schlecht
+        \end{center}
+    \end{columns}
+\end{frame}
+%\begin{frame}
+    %\frametitle{Lange Namen kein Problem}
+    %\begin{columns}[t]
+        %\column{0.5\textwidth}
+        %\begin{center}
+            %\huge \color{green} Gut
+        %\end{center}
+        %\column{0.5\textwidth}
+        %\begin{center}
+            %\huge \color{red} Schlecht
+        %\end{center}
+    %\end{columns}
+%\end{frame}
+\begin{frame}
+    \frametitle{Keine Füllwörter}
+    \begin{columns}[t]
+        \column{0.5\textwidth}
+        \begin{center}
+            \huge \color{green} Gut
+        \end{center}
+        \column{0.5\textwidth}
+        \begin{center}
+            \huge \color{red} Schlecht
+        \end{center}
+    \end{columns}
 \end{frame}
 
 \subsection{Funktionen}
