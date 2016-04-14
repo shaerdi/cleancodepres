@@ -132,40 +132,14 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
 \begin{frame}
     \frametitle{Namen}
         %TODO: Lustiges Bild
-    %\begin{outline}
-        %\1 Namen sollen Beschreiben
-        %\1 Lange Namen kein Problem
-        %\1 Keine Füllwörter
-    %\end{outline}
+    \begin{outline}
+        \1 Ein guter Variablenname ist besser als ein Kommentar
+        \1 Mit einer IDE sind lange Namen kein Problem
+        \1 Keine Abkue;rzungen, Fue;llwoe;rter oder Hungarian Naming
+    \end{outline}
 \end{frame}
 \begin{frame}
-    \frametitle{Namen sollen Beschreiben}
-    \begin{columns}[t]
-        \column{0.5\textwidth}
-        \begin{center}
-            \huge \color{green} Gut
-        \end{center}
-        \column{0.5\textwidth}
-        \begin{center}
-            \huge \color{red} Schlecht
-        \end{center}
-    \end{columns}
-\end{frame}
-%\begin{frame}
-    %\frametitle{Lange Namen kein Problem}
-    %\begin{columns}[t]
-        %\column{0.5\textwidth}
-        %\begin{center}
-            %\huge \color{green} Gut
-        %\end{center}
-        %\column{0.5\textwidth}
-        %\begin{center}
-            %\huge \color{red} Schlecht
-        %\end{center}
-    %\end{columns}
-%\end{frame}
-\begin{frame}
-    \frametitle{Keine Füllwörter}
+    \frametitle{Beispiele}
     \begin{columns}[t]
         \column{0.5\textwidth}
         \begin{center}
@@ -184,9 +158,22 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
     \begin{outline}
         \1 Kurz
         \1 Kürzer!
-        \1 Nur eine Sache
+        \1 One Thing
         \1 Möglichst wenig Argumente
     \end{outline}
+\end{frame}
+\begin{frame}
+    \frametitle{Beispiele}
+    \begin{columns}[t]
+        \column{0.5\textwidth}
+        \begin{center}
+            \huge \color{green} Gut
+        \end{center}
+        \column{0.5\textwidth}
+        \begin{center}
+            \huge \color{red} Schlecht
+        \end{center}
+    \end{columns}
 \end{frame}
 
 \subsection{Kommentare}
@@ -194,32 +181,96 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
     \frametitle{Kommentare}
     \begin{outline}
         \1 Kommentare sind \emph{nicht} per se gut
-        \1 Auskommentierter Code
-        \1 Nicht mehr aktuelle Kommentare
+        \1 Weniger ist mehr
+        \1 Ein Kommentar soll immer wohlue;berlegt sein
+        \1 Kein Code auskommentieren
     \end{outline}
+\end{frame}
+\begin{frame}
+    \frametitle{Beispiele}
+    \begin{columns}[t]
+        \column{0.5\textwidth}
+        \begin{center}
+            \huge \color{green} Gut
+        \end{center}
+        \column{0.5\textwidth}
+        \begin{center}
+            \huge \color{red} Schlecht
+        \end{center}
+    \end{columns}
 \end{frame}
 
 \section{Erweitert}
+\begin{frame}
+    \tableofcontents[currentsection]
+\end{frame}
+\subsection{Versionierungssystem}
+\begin{frame}
+    \frametitle{Versionierungsystem}
+
+    Eine Versionskontrolle ist unerlae;sslich fue;r
+    \begin{outline}
+        \1 Absicherung gegen Ausfae;lle
+        \1 Zusammenarbeit von mehreren Leuten
+        \1 Schnelles Austesten von neuen Funktionen
+        \1 ...
+    \end{outline} \pause
+
+    Welches System?
+    \begin{outline}
+        \1 Egal
+        \2 Git
+        \2 Svn
+        \2 Mercurial
+    \end{outline}
+\end{frame}
 \subsection{Tests}
 \begin{frame}
     \frametitle{Tests}
+    Woher ist bekannt, ob der Code funktioniert?\pause
+
     \begin{outline}
-        \1 Jeder schreibt Tests 
-        \1[] $\Rightarrow$  Wieso nur in Konsole?
+        \1 Jeder schreibt Tests, aber of nur in der Konsole
         \1 Gehören zum Code dazu
-        \1 Alles Testen
+    \end{outline} \pause
+
+    Unit-Tests:
+    \begin{outline}
+        \1 Alles einzeln Testen
             \2 Jede Funktion
             \2 Möglichst jeden Spezialfall
     \end{outline}
+    $\Rightarrow$ Es gibt fue;r (fast) alle Sprachen bereits sehr bequeme
+    Frameworks, um solche Tests aufzusetzen und laufen zu lassen.
+\end{frame}
+\begin{frame}
+    \frametitle{Beispiel}
+    %TODO: TestCode zeigen
 \end{frame}
 \subsection{Test Driven Development}
 \begin{frame}
     \frametitle{Test Driven Development}
+    Vorgehen:
+
     \begin{outline}
         \1 Tests \emph{vor} der Funktion schreiben
         \1 Ein Test $\rightarrow$ Eine Funktion $\rightarrow$ repeat
+    \end{outline}\pause
+
+    Vorteile:
+
+    \begin{outline}
+        \1 Fue;hrt zu sehr kleinen Funktionen
+        \1 Anforderungen an den Code mue;ssen jeweils \emph{vor} dem Schreiben
+        definiert werden
+        \1 Debuggen wird stark reduziert und viel einfacher
     \end{outline}
 \end{frame}
+\begin{frame}
+    \frametitle{Beispiel}
+    %TODO: 
+\end{frame}
+
 \subsection{Successive Refinement}
 \begin{frame}
     \frametitle{Successive Refinement}
