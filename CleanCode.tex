@@ -66,7 +66,7 @@
     Funktion zurückführen:
 \begin{lstlisting}
 ...
-result = testPoints(xCoords,yCoords);
+result = testPoints(x,y);
 ...
 \end{lstlisting}
 Leider hatte der Autor keine Zeit für Kommentare, und Ignaz ist nicht sicher,
@@ -75,10 +75,11 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
 \end{frame}
 
 \begin{frame}
-    \frametitle{Inhalt}
-    \tableofcontents
+    \frametitle{Resultat des Codes}
+    \begin{center}
+        \includegraphics[width=0.8\linewidth]{GrafikResultat.png}
+    \end{center}
 \end{frame}
-
 
 
 \begin{frame}
@@ -101,13 +102,19 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
 \section{Basics}
 \begin{frame}
     \tableofcontents
+    \begin{tikzpicture}[overlay,
+        shift={(current page.south west)},
+        x = \paperwidth,
+        y = \paperheight,
+    ]
+\end{tikzpicture}
     \only<2->{
     \begin{tikzpicture}[overlay,
         shift={(current page.south west)},
         x = \paperwidth,
         y = \paperheight,
     ]
-    \draw[red] (0.27,0.58) to[out=0,in=180] ++(0.025,-0.1) node[right] (a) {}
+    \draw[red] (0.27,0.62) to[out=0,in=180] ++(0.025,-0.1) node[right] (a) {}
     to[out=180,in=0] ++(-0.025,-0.1);
     \draw[->,red] (0.6,0.5) node[right] {Für alle Codes!} 
     to[out=170,in=10] (a);
@@ -118,36 +125,47 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
         x = \paperwidth,
         y = \paperheight,
     ]
-    \draw[red] (0.45,0.33) to[out=0,in=180] ++(0.025,-0.1) node[right] (b) {}
-    to[out=180,in=0] ++(-0.025,-0.1);
+    \draw[red] (0.45,0.36) to[out=0,in=180] ++(0.025,-0.11) node[right] (b) {}
+    to[out=180,in=0] ++(-0.025,-0.11);
     \draw[->,red] (0.6,0.2) node[right,align=left] {Für grössere /\\
-    Projekt Codes} 
+    Codes (Projekte)} 
     to[out=170,in=10] (b);
     \end{tikzpicture}}
 \end{frame}
 \begin{frame}
     \tableofcontents[currentsection]
+    \begin{tikzpicture}[overlay,
+        shift={(current page.south west)},
+        x = \paperwidth,
+        y = \paperheight,
+    ]
+\end{tikzpicture}
 \end{frame}
 \subsection{Namen}
 \begin{frame}
     \frametitle{Namen}
         %TODO: Lustiges Bild
+    Grundregeln:
+
     \begin{outline}
         \1 Ein guter Variablenname ist besser als ein Kommentar
         \1 Mit einer IDE sind lange Namen kein Problem
-        \1 Keine Abkue;rzungen, Fue;llwoe;rter oder Hungarian Naming
+        \1 Keine Abkürzungen, Füllwörter oder Hungarian Naming
     \end{outline}
 \end{frame}
 \begin{frame}
     \frametitle{Beispiele}
+    \begin{center}
+        \includegraphics[width=\linewidth]{NamenBeispiele.PNG}
+    \end{center}
     \begin{columns}[t]
         \column{0.5\textwidth}
         \begin{center}
-            \huge \color{green} Gut
+            \huge \color{red} Schlecht
         \end{center}
         \column{0.5\textwidth}
         \begin{center}
-            \huge \color{red} Schlecht
+            \huge \color{green} Gut
         \end{center}
     \end{columns}
 \end{frame}
@@ -155,10 +173,16 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
 \subsection{Funktionen}
 \begin{frame}
     \frametitle{Funktionen}
+    Grundregeln:
+
     \begin{outline}
+        \pause
         \1 Kurz
+        \pause
         \1 Kürzer!
-        \1 One Thing
+        \pause
+        \1 Nur eine Sache
+        \pause
         \1 Möglichst wenig Argumente
     \end{outline}
 \end{frame}
@@ -167,11 +191,21 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
     \begin{columns}[t]
         \column{0.5\textwidth}
         \begin{center}
-            \huge \color{green} Gut
+            \includegraphics[height=4.5cm]{FunktionSchlecht.png}
         \end{center}
         \column{0.5\textwidth}
         \begin{center}
+            \includegraphics[width=\linewidth]{FunktionGut.png}
+        \end{center}
+    \end{columns}
+    \begin{columns}[t]
+        \column{0.5\textwidth}
+        \begin{center}
             \huge \color{red} Schlecht
+        \end{center}
+        \column{0.5\textwidth}
+        \begin{center}
+            \huge \color{green} Gut
         \end{center}
     \end{columns}
 \end{frame}
@@ -179,10 +213,16 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
 \subsection{Kommentare}
 \begin{frame}
     \frametitle{Kommentare}
+    Grundregeln:
+
     \begin{outline}
+        \pause
         \1 Kommentare sind \emph{nicht} per se gut
+        \pause
         \1 Weniger ist mehr
-        \1 Ein Kommentar soll immer wohlue;berlegt sein
+        \pause
+        \1 Ein Kommentar sollte immer wohlüberlegt sein
+        \pause
         \1 Kein Code auskommentieren
     \end{outline}
 \end{frame}
@@ -208,9 +248,9 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
 \begin{frame}
     \frametitle{Versionierungsystem}
 
-    Eine Versionskontrolle ist unerlae;sslich fue;r
+    Eine Versionskontrolle ist unerlässlich für
     \begin{outline}
-        \1 Absicherung gegen Ausfae;lle
+        \1 Absicherung gegen Ausfälle
         \1 Zusammenarbeit von mehreren Leuten
         \1 Schnelles Austesten von neuen Funktionen
         \1 ...
@@ -240,7 +280,7 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
             \2 Jede Funktion
             \2 Möglichst jeden Spezialfall
     \end{outline}
-    $\Rightarrow$ Es gibt fue;r (fast) alle Sprachen bereits sehr bequeme
+    $\Rightarrow$ Es gibt für (fast) alle Sprachen bereits sehr bequeme
     Frameworks, um solche Tests aufzusetzen und laufen zu lassen.
 \end{frame}
 \begin{frame}
@@ -260,8 +300,8 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
     Vorteile:
 
     \begin{outline}
-        \1 Fue;hrt zu sehr kleinen Funktionen
-        \1 Anforderungen an den Code mue;ssen jeweils \emph{vor} dem Schreiben
+        \1 Führt zu sehr kleinen Funktionen
+        \1 Anforderungen an den Code müssen jeweils \emph{vor} dem Schreiben
         definiert werden
         \1 Debuggen wird stark reduziert und viel einfacher
     \end{outline}
