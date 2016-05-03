@@ -148,8 +148,11 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
     Grundregeln:
 
     \begin{outline}
+        \pause
         \1 Ein guter Variablenname ist besser als ein Kommentar
+        \pause
         \1 Mit einer IDE sind lange Namen kein Problem
+        \pause
         \1 Keine Abkürzungen, Füllwörter oder Hungarian Naming
     \end{outline}
 \end{frame}
@@ -256,13 +259,9 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
         \1 ...
     \end{outline} \pause
 
-    Welches System?
-    \begin{outline}
-        \1 Egal
-        \2 Git
-        \2 Svn
-        \2 Mercurial
-    \end{outline}
+    \vspace{2em}Welches System?\hspace{3em}
+    \pause 
+    Egal! (Git, svn, mercurial)
 \end{frame}
 \subsection{Tests}
 \begin{frame}
@@ -284,7 +283,7 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
     Frameworks, um solche Tests aufzusetzen und laufen zu lassen.
 \end{frame}
 \begin{frame}
-    \frametitle{Beispiel}
+    \frametitle{Beispiel - Matlab Unit Tests}
     %TODO: TestCode zeigen
 \end{frame}
 \subsection{Test Driven Development}
@@ -316,13 +315,19 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
     \frametitle{Successive Refinement}
     \begin{outline}
         \1 Code ist \emph{nicht} fertig, sobald er funktioniert
-        \1 Kontinuierlich verbessern
+        \1 Kontinuierlich verbessern (Pfadfinder-Regel)
         \1 Dank Tests keine Angst, etwas kaputt zu machen
     \end{outline}
 \end{frame}
 
 \section{Fazit}
 \begin{frame}
+    \begin{tikzpicture}[overlay,
+        shift={(current page.south west)},
+        x = \paperwidth,
+        y = \paperheight,
+    ]
+\end{tikzpicture}
     \frametitle{Fazit}
     \begin{outline}
         \1 Beschreibende Namen
@@ -331,6 +336,19 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
         \1 Versionierungssystem benutzen
         \1 Tests \emph{zuerst} schreiben
     \end{outline}
+    \pause
+    \begin{tikzpicture}[overlay,
+        shift={(current page.south west)},
+        x = \paperwidth,
+        y = \paperheight,
+    ]
+    \node[rotate=30,red,align=left] at (0.7,0.2) {Dranbleiben!!};
+\end{tikzpicture}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Übung}
+    Eine Programm soll mit dem Sieb des Eratosthenes alle Primzahlen bis zu
+    einer gegebenen Zahl bestimmen. Wie könnte dieses Programm aussehen?
+\end{frame}
 \end{document}
