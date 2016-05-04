@@ -339,12 +339,10 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
     \frametitle{Tests}
     Woher ist bekannt, ob der Code funktioniert?\pause
 
-    \begin{outline}
-        \1 Jeder schreibt Tests, aber of nur in der Konsole
-        \1 Gehören zum Code dazu
-    \end{outline} \pause
+    Jeder schreibt Tests, aber of nur in der Konsole\\
+    $\Rightarrow$ Gehören zum Code dazu
 
-    Unit-Tests:
+    \vspace{1em}\pause Unit-Tests:
     \begin{outline}
         \1 Alles einzeln Testen
             \2 Jede Funktion
@@ -352,6 +350,9 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
     \end{outline}
     $\Rightarrow$ Es gibt für (fast) alle Sprachen bereits sehr bequeme
     Frameworks, um solche Tests aufzusetzen und laufen zu lassen.
+
+    \vspace{1em} \color{red} Drchführen aller Tests muss mit einem Klick
+/ Befehl möglich sein!
 \end{frame}
 \begin{frame}
     \frametitle{Beispiel - Matlab Unit Tests}
@@ -374,7 +375,7 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
 
     \begin{outline}
         \1 Führt zu sehr kleinen Funktionen
-        \1 Anforderungen an den Code müssen jeweils \emph{vor} dem Schreiben
+        \1 Anforderungen müssen jeweils \emph{vor} dem Schreiben des Codes
         definiert werden
         \1 Debuggen wird stark reduziert und viel einfacher
     \end{outline}
