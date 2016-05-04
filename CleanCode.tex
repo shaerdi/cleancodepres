@@ -1,4 +1,5 @@
 \documentclass[handout]{beamer}
+%\documentclass{beamer}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -18,7 +19,7 @@
 \title[CleanCode]{Clean Code}
 \author{Simon Härdi}
 \institute{Institute for Computational Engineering}
-\date{xx}
+\date{19. Mai 2016}
 
 \graphicspath{ {pictures/} }
 
@@ -49,9 +50,7 @@
         \begin{outline}
             \1 Was ist Clean Code?
             \1[]
-            \1 Wieso betrifft das uns?
-            \1[] (Wir sind doch Ingenieure, keine
-            Informatiker\ldots)
+            \1 Wie schreibt man Clean Code?
         \end{outline}
     \end{column}
     \begin{column}{0.4\textwidth}
@@ -60,6 +59,38 @@
 \end{columns}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Wieso dieser Vortrag?}
+    \pause
+    \begin{center}\begin{tikzpicture}
+        \definecolor{lightgreen}{rgb}{0.7,1,0.7};
+        \draw[draw=none,fill=lightgreen] (-1.5,0) circle[radius=2];
+        \draw (-1.5,0) circle[radius=2];
+        \node[align=center] at (-2,0) {Komplexe\\ Algorithmen};
+        \node (a) at (-3,-2.5) {Eine Kernkompetenz des ICE};
+        \draw[->] (a) to[in=190,out=120] (-3,-1.5) ;
+
+        \pause
+        \draw[draw=none,fill=lightgreen] (1.5,0) circle[radius=2];
+        \node[align=center] at (2,0) {Guter Code};
+        \draw (-1.5,0) circle[radius=2];
+        \draw (1.5,0) circle[radius=2];
+
+        \pause
+        \node (c) at (0,3) {Nicht das Gleiche!};
+        \draw[->] (c) to[in=60,out=0] (2.7,1.7) ;
+        \draw[->] (c) to[in=120,out=180] (-2.7,1.7) ;
+
+        \pause
+        \begin{scope}
+            \clip (-1.5,0) circle[radius=2];
+            \clip (1.5,0) circle[radius=2];
+            \fill[green] (0,0) circle[radius=3];
+        \end{scope}
+
+    \end{tikzpicture}\end{center}
+
+\end{frame}
 \begin{frame}[fragile]
     \frametitle{Einführungsbeispiel}
     Ignaz soll einen Bug in einem Code fixen. Er konnte den Fehler auf folgende
@@ -262,7 +293,7 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
 \begin{frame}
     \frametitle{Beispiele}
         \begin{center}
-    \includegraphics[width=0.6\textwidth]{pictures/Kommentare4.PNG}
+    \includegraphics[width=0.5\textwidth]{pictures/Kommentare4.PNG}
 
     \pause
     \vspace{2em}
@@ -300,6 +331,8 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
     \vspace{2em}Welches System?\hspace{3em}
     \pause 
     Egal! (Git, svn, mercurial)
+
+    \vspace{1em}\pause{\color{red} Keine Ordner mit xy\_V01, xy\_V02\ldots}
 \end{frame}
 \subsection{Tests}
 \begin{frame}
@@ -386,7 +419,14 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
 
 \begin{frame}
     \frametitle{Übung}
-    Eine Programm soll mit dem Sieb des Eratosthenes alle Primzahlen bis zu
+    Ein Programm soll mit dem Sieb des Eratosthenes alle Primzahlen bis zu
     einer gegebenen Zahl bestimmen. Wie könnte dieses Programm aussehen?
+
+    \begin{outline}
+        \1 TDD: Welche Tests muss das Programm erfüllen?
+        \1 Kurze Funktionen: Hauptprogramm mit grobem Ablauf, jeden Schritt in
+        eine Funktion verpacken
+        \1 Kommentare: Welche sind wirklich nötig?
+    \end{outline}
 \end{frame}
 \end{document}
