@@ -1,5 +1,5 @@
-\documentclass[handout]{beamer}
-%\documentclass{beamer}
+%\documentclass[handout]{beamer}
+\documentclass{beamer}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -158,7 +158,7 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
     ]
     \draw[red] (0.45,0.36) to[out=0,in=180] ++(0.025,-0.11) node[right] (b) {}
     to[out=180,in=0] ++(-0.025,-0.11);
-    \draw[->,red] (0.6,0.2) node[right,align=left] {Für grössere /\\
+    \draw[->,red] (0.6,0.2) node[right,align=left] {Für grössere \\
     Codes (Projekte)} 
     to[out=170,in=10] (b);
     \end{tikzpicture}}
@@ -263,31 +263,11 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
 \begin{frame}
     \frametitle{Beispiele}
         \begin{center}
-    \includegraphics[width=\textwidth]{pictures/Kommentare1.PNG}
-
-    \pause
-    \vspace{2em}
-            \huge \color{green} OK
-        \end{center}
-\end{frame}
-\begin{frame}
-    \frametitle{Beispiele}
-        \begin{center}
     \includegraphics[width=0.5\textwidth]{pictures/Kommentare3.PNG}
 
     \pause
     \vspace{2em}
             \huge \color{red} Schlecht: Überflüssig
-        \end{center}
-\end{frame}
-\begin{frame}
-    \frametitle{Beispiele}
-        \begin{center}
-    \includegraphics[width=\textwidth]{pictures/Kommentare2.PNG}
-
-    \pause
-    \vspace{2em}
-            \huge \color{green} OK
         \end{center}
 \end{frame}
 \begin{frame}
@@ -303,11 +283,31 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
 \begin{frame}
     \frametitle{Beispiele}
         \begin{center}
+    \includegraphics[width=\textwidth]{pictures/Kommentare2.PNG}
+
+    \pause
+    \vspace{2em}
+            \huge \color{green} OK
+        \end{center}
+\end{frame}
+\begin{frame}
+    \frametitle{Beispiele}
+        \begin{center}
     \includegraphics[width=\textwidth]{pictures/Kommentare5.PNG}
 
     \pause
     \vspace{2em}
             \huge \color{red} Schlecht: Kommentar falsch
+        \end{center}
+\end{frame}
+\begin{frame}
+    \frametitle{Beispiele}
+        \begin{center}
+    \includegraphics[width=\textwidth]{pictures/Kommentare1.PNG}
+
+    \pause
+    \vspace{2em}
+            \huge \color{orange} Naja...
         \end{center}
 \end{frame}
 
@@ -359,7 +359,12 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
     \url{ch.mathworks.com/help/matlab/matlab_prog/write-simple-test-case-with-functions.html}
     \vspace{2em}
 
-    $\Rightarrow$ Matlab Demo
+    $\Rightarrow$ Matlab Demo Quadratischer Löser
+
+    \vspace{1em}Löse
+    \begin{center}\begin{equation*}
+        ax^2+bx+c=0
+    \end{equation*}\end{center}
 \end{frame}
 \subsection{Test Driven Development}
 \begin{frame}
@@ -381,8 +386,11 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
     \end{outline}
 \end{frame}
 \begin{frame}
-    \frametitle{Beispiel}
-    %TODO: 
+    \frametitle{Beispiel - Matlab TDD}
+    Quadratischer Löser revidiert:\\
+    Dieses mal beginnen wir mit den Anforderungen.\\
+    \vspace{1em}\pause
+    Vorschläge?
 \end{frame}
 
 \subsection{Successive Refinement}
@@ -392,6 +400,14 @@ was die Funktion \codeemph{testPoints} tut und wo der Fehler liegt.
         \1 Code ist \emph{nicht} fertig, sobald er funktioniert
         \1 Kontinuierlich verbessern (Pfadfinder-Regel)
         \1 Dank Tests keine Angst, etwas kaputt zu machen
+    \end{outline}
+    \pause
+
+    \vspace{1em}Beispiele:
+    \begin{outline}
+        \1 Variablennamen verbessern
+        \1 Sich wiederholenden Code in Funktion auslagern
+        \1 Einen Kommentar überarbeiten
     \end{outline}
 \end{frame}
 
